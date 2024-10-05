@@ -43,10 +43,13 @@ element = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='demo-ta
 driver.execute_script("arguments[0].scrollIntoView();", element)
 
 # %%
+#Element index 
+
 time.sleep(2)
+
 wait = WebDriverWait(driver, 10)
 element = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='demo-tab-list']")))
-driver.execute_script("arguments[0].scrollIntoView();", element)
+driver.execute_script("arguments[0].scrollIntoView();", element) 
 
 elemento_drag = driver.find_element(By.XPATH, "//*[@id='demo-tabpane-list']/div/div[6]")
 elemento_drop = driver.find_element(By.XPATH, "//*[@id='demo-tabpane-list']/div/div[1]")   
