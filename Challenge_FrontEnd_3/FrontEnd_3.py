@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
+import time
 
 # %%
 #Creating drive connection 
@@ -80,6 +81,7 @@ element.click()
 
 # %%
 #Editing user form
+time.sleep(2)
 wait = WebDriverWait(driver, 10)
 element = wait.until(EC.presence_of_element_located((By.XPATH, "//*[@id='edit-record-4']")))
 driver.execute_script("arguments[0].scrollIntoView();", element)
